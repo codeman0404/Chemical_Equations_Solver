@@ -17,6 +17,16 @@ class ViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        var i = 0
+        while (i < 10){
+            
+            print(i)
+            i += 1
+            
+        }
+    }
 
 
 }
