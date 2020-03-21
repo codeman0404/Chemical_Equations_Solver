@@ -9,9 +9,8 @@
 import Foundation
 
 class Molecule {
-    
-    let name: String
-    var moleculeData: Dictionary<String, Int>
+    private let name: String
+    private var moleculeData: Dictionary<String, Int>
     
     init(molName: String){
         
@@ -54,7 +53,7 @@ class Molecule {
     }
     
     // Note that if the key you are trying to acess doesnt exist, the dictionary returns nil
-    func multiplicity(element:String) -> Int {
+    func getMultiplicity(element:String) -> Int {
         
         let num = moleculeData[element]
         

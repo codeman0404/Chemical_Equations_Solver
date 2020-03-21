@@ -13,19 +13,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("hello world")
         
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        var i = 0
-        while (i < 10){
-            
-            print(i)
-            i += 1
-            
-        }
+        
+        
+        var myMolecule = Molecule(molName: "H2O")
+        myMolecule.addElement(element: "H", multiplicity: 1)
+        myMolecule.incrementElement(element: "H", multiplicity: 1)
+        myMolecule.addElement(element: "O", multiplicity: 1)
+        let OisIN = myMolecule.contains(element: "O")
+        let HisIn = myMolecule.contains(element: "H")
+        print(OisIN)
+        print(HisIn)
+        print(myMolecule.moleculeData)
+        myMolecule.addElement(element: "H", multiplicity: 2)
+        myMolecule.incrementElement(element: "W", multiplicity: 25)
+        let mult = myMolecule.getMultiplicity(element: "H")
+        let mult2 = myMolecule.getMultiplicity(element: "@")
+        print(mult)
+        print(mult2)
     }
 
 
