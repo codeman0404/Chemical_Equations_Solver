@@ -13,6 +13,7 @@
 		D41E81F823BFCD6C00715458 /* Chemical_Equations_Solver.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D41E81F623BFCD6C00715458 /* Chemical_Equations_Solver.xcdatamodeld */; };
 		D41E81FA23BFCD6D00715458 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41E81F923BFCD6D00715458 /* Assets.xcassets */; };
 		D41E81FD23BFCD6D00715458 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41E81FB23BFCD6D00715458 /* LaunchScreen.storyboard */; };
+		D4927C562426A68F00E668BC /* BuildMoleculeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4927C552426A68F00E668BC /* BuildMoleculeViewController.swift */; };
 		D4F0D72824256A3A0041E839 /* Molecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F0D72724256A3A0041E839 /* Molecule.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		D41E81F923BFCD6D00715458 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D41E81FC23BFCD6D00715458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D41E81FE23BFCD6D00715458 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4927C552426A68F00E668BC /* BuildMoleculeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildMoleculeViewController.swift; sourceTree = "<group>"; };
 		D4F0D72724256A3A0041E839 /* Molecule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Molecule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +64,7 @@
 				D41E81F123BFCD6C00715458 /* ViewController.swift */,
 				D41E81F323BFCD6C00715458 /* Main.storyboard */,
 				D4F0D72724256A3A0041E839 /* Molecule.swift */,
+				D4927C552426A68F00E668BC /* BuildMoleculeViewController.swift */,
 				D41E81F923BFCD6D00715458 /* Assets.xcassets */,
 				D41E81FB23BFCD6D00715458 /* LaunchScreen.storyboard */,
 				D41E81FE23BFCD6D00715458 /* Info.plist */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D41E81F223BFCD6C00715458 /* ViewController.swift in Sources */,
+				D4927C562426A68F00E668BC /* BuildMoleculeViewController.swift in Sources */,
 				D41E81F823BFCD6C00715458 /* Chemical_Equations_Solver.xcdatamodeld in Sources */,
 				D41E81F023BFCD6C00715458 /* AppDelegate.swift in Sources */,
 				D4F0D72824256A3A0041E839 /* Molecule.swift in Sources */,
