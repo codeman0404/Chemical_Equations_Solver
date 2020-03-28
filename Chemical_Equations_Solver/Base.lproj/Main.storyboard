@@ -82,6 +82,7 @@
                     <connections>
                         <outlet property="leftSideEqLabel" destination="TQb-pK-W8C" id="Ccx-or-aI6"/>
                         <outlet property="rightSideEqLabel" destination="tBh-EH-kXz" id="jLb-WP-FBz"/>
+                        <outlet property="textField" destination="UXU-1g-oEg" id="Zny-st-Paj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
