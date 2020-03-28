@@ -27,6 +27,8 @@ class ViewController: UIViewController {
             rightMolecules.append(mol)
             
         }
+        
+        textField.text = ""
     }
     
     
@@ -47,7 +49,7 @@ class ViewController: UIViewController {
             
         }
         
-        
+        textField.text = ""
     }
     
     // This button ballances the currently displayed equation.
@@ -141,6 +143,7 @@ class ViewController: UIViewController {
     // helper function that updates the equation labels
     func updateGraphics(){
         
+        var eqString = ""
         
         
     }

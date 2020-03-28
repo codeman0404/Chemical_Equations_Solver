@@ -22,6 +22,7 @@ class Molecule {
     
     // Note that if the key you are trying to acess doesnt exist, the dictionary returns nil
     func addElement(element:String, multiplicity:Int){
+        
         if(moleculeData[element] == nil){
             moleculeData[element] = multiplicity
         } else {
