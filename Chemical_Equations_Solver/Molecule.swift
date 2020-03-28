@@ -65,6 +65,12 @@ class Molecule {
         }
     }
     
+    // function returns the name of the molecule
+    func getName() -> String {
+        return name
+        
+    }
+    
 }
 
 
