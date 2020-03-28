@@ -11,8 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var rightSideEqLabel: UILabel!
-    @IBOutlet weak var leftSideEqLabel: UILabel!
+    @IBOutlet weak var equationLabel: UILabel!
     
     // This button takes whatever molecule the slider has currently selected and adds it to the left side of the equation
     @IBAction func addMoleculeRight(_ sender: Any) {
@@ -142,6 +141,8 @@ class ViewController: UIViewController {
     // helper function that updates the equation labels
     func updateGraphics(){
         
+        
+        
     }
     
     
@@ -178,7 +179,7 @@ class ViewController: UIViewController {
         let fontSub:UIFont? = UIFont(name: "Helvetica", size:10)
         let attString:NSMutableAttributedString = NSMutableAttributedString(string: "H2O", attributes: [.font:font!])
         attString.setAttributes([.font:fontSub!,.baselineOffset:-3], range: NSRange(location:1,length:1))
-        rightSideEqLabel.attributedText = attString
+        equationLabel.attributedText = attString
         
     }
 

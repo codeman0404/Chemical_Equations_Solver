@@ -9,6 +9,7 @@
 import Foundation
 
 class Molecule {
+    
     private let name: String
     private var moleculeData: Dictionary<String, Int>
     
