@@ -13,6 +13,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var equationLabel: UILabel!
     
+    
+    // Define Molecule arrays to keep track of the molecules on each side of the equation
+    var leftMolecules: [Molecule] = []
+    var rightMolecules: [Molecule] = []
+    
+    
+    
     // This button takes whatever molecule the slider has currently selected and adds it to the left side of the equation
     @IBAction func addMoleculeRight(_ sender: Any) {
         
@@ -29,6 +36,7 @@ class ViewController: UIViewController {
         }
         
         textField.text = ""
+        updateGraphics()
     }
     
     
@@ -50,7 +58,10 @@ class ViewController: UIViewController {
         }
         
         textField.text = ""
+        updateGraphics()
     }
+    
+    
     
     // This button ballances the currently displayed equation.
     @IBAction func balanceEquation(_ sender: Any) {
@@ -58,9 +69,7 @@ class ViewController: UIViewController {
     }
     
     
-    // Define Molecule arrays to keep track of the molecules on each side of the equation
-    var leftMolecules: [Molecule] = []
-    var rightMolecules: [Molecule] = []
+    
     
     
     // Function description: convertStringToMolecule takes in a string and processes its information. This information is stored and returned as a molecule Object.
@@ -144,6 +153,87 @@ class ViewController: UIViewController {
     func updateGraphics(){
         
         var eqString = ""
+        
+        var indexArray: [Int]
+        
+        indexArray = []
+        
+        var i = 0
+        
+        
+        var x = 0
+        var length = leftMolecules.count - 1
+        for molObject in leftMolecules {
+            
+            for char in molObject.getName() {
+                
+                let tempString = String(char)
+                
+                if let num = Int(tempString){
+                    
+                    indexArray.append(i)
+                    
+                }
+                
+                i = i + 1
+            }
+            
+            
+            if x == length{
+                eqString = eqString + molObject.getName()
+            } else {
+                eqString = eqString + molObject.getName() + " + "
+                i = i + 3
+            }
+
+            x = x + 1
+            
+        }
+        
+        eqString = eqString + " -> "
+        i = i + 4
+        
+        
+        x = 0
+        length = rightMolecules.count - 1
+        
+        for molObject in rightMolecules {
+            
+            for char in molObject.getName() {
+                
+                let tempString = String(char)
+                
+                if let num = Int(tempString){
+                    
+                    indexArray.append(i)
+                    
+                }
+                
+                i = i + 1
+            }
+            
+            
+            if x == length{
+                eqString = eqString + molObject.getName()
+            } else {
+                eqString = eqString + molObject.getName() + " + "
+                i = i + 3
+            }
+            
+            x = x + 1
+            
+        }
+        
+        
+        let font:UIFont? = UIFont(name: "Helvetica", size:20)
+        let fontSub:UIFont? = UIFont(name: "Helvetica", size:10)
+        let attString:NSMutableAttributedString = NSMutableAttributedString(string: eqString, attributes: [.font:font!])
+        
+        for num in indexArray{
+            attString.setAttributes([.font:fontSub!,.baselineOffset:-3], range: NSRange(location:num,length:1))
+        }
+    
+        equationLabel.attributedText = attString
         
         
     }

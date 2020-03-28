@@ -72,6 +72,13 @@ class Molecule {
         
     }
     
+    func getNumUniqueAtoms() -> Int {
+        
+        return Array(moleculeData.keys).count
+        
+        
+    }
+    
 }
 
 
