@@ -263,17 +263,6 @@ class ViewController: UIViewController {
         print(mult)
         print(mult2)
         
-        print("Hallo Werld")
-        
-        
-    
-        // This is example code for how to create a string with subscripts
-        let font:UIFont? = UIFont(name: "Helvetica", size:20)
-        let fontSub:UIFont? = UIFont(name: "Helvetica", size:10)
-        let attString:NSMutableAttributedString = NSMutableAttributedString(string: "H2O", attributes: [.font:font!])
-        attString.setAttributes([.font:fontSub!,.baselineOffset:-3], range: NSRange(location:1,length:1))
-        equationLabel.attributedText = attString
-        
     }
 
 
